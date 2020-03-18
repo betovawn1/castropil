@@ -1,0 +1,242 @@
+<!-- 
+ *
+ * Desenvolvido por Integrando.se
+ * hello@integrando.se
+ * 
+ * Bootstrap v.3
+ *
+ -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../../dist/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+</head>
+
+<div id="extra-header-top"></div>
+
+<header class="header-container">
+    <div class="topdiv container-fluid"></div>
+
+    <div class="header">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="button-menu-xs col-xs-3 col-sm-1 visible-xs visible-sm">
+                    <button class="btn btn-default btn-open-menu-xs btn-menu-xs" data-id="#menu-mobile"><i
+                            class="fa fa-bars"></i></button>
+                    <div id="menu-mobile" style="display: none;">
+                        <div class="header-menu-mobile visible-xs">
+                            <span class="close-menu pull-right btn-menu-xs" data-id="#menu-mobile"><i
+                                    class="fa fa-times"></i></span>
+                            <span class="icone-menu"><i class="fa fa-bars"></i></span>
+                        </div>
+                        <div class="recebe-menu">
+                            <!-- RECEBE MENuuU MOBILE -->
+
+
+                        </div>
+                        <div class="menu-mobile-account">
+                            <hr />
+                            <ul>
+                                <li class="link-login"><a href="/account" title="Fazer Login">Entrar</a></li>
+                                <li class="link-orders"><a href="/account/orders" title="Meus Pedidos">Meus Pedidos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .button-menu-xs -->
+
+                <div class="logo col-xs-6 col-sm-2 col-md-2 col-lg-2">
+                    <a href="/" title="STORE" class="link-logo">
+                        <img src="/arquivos/logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <!-- .logo -->
+                <div class="mini-cart mini-cart-xs text-right col-xs-3 visible-xs">
+                    <a title="Carrinho de Compras" href="/checkout/#/cart" class="btn btn-default">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="badge bg-danger mini-cart-qty-admake">12</span>
+                    </a>
+                </div><!-- .mini-cart-xs -->
+                <div class="busca-whats col-xs-7 col-md-8 col-lg-7">
+                    <div class="sing-in col-xs-12 col-sm-12 col-md-12 col-lg-12 hidden-xs">
+                        <div class="btn-group" role="group">
+
+                            <a href="/account" title="Fazer Login" class="btn btn-default btn-login">
+                                <i class="fa fa-sign-in hidden-lg hidden-md"></i>
+                                <span class="visible-lg visible-md">Faça seu <strong>Login</strong></span>
+                            </a>
+
+                            <a href="/account/orders" title="Meus Pedidos" class="btn btn-default btn-orders">
+                                <i class="fa fa-list-alt hidden-md hidden-lg"></i>
+                                <span class="visible-lg visible-md">Ou <strong>Cadastre-se</strong></span>
+                            </a>
+                        </div>
+
+
+                    </div><!-- .sing-in -->
+
+
+                    <div class="search col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <vtex.cmc:fullTextSearchBox />
+                    </div><!-- .search -->
+                </div>
+
+
+                <div class="mini-cart col-mini-cart col-xs-1 col-sm-1 col-md-2 col-lg-2 hidden-xs">
+                    <a title="Carrinho de Compras" href="/checkout/#/cart"
+                        class="btn btn-default btn-block btn-mini-cart">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="hidden-sm mini-cart-label">Meu Carrinho</span>
+                        <span class="badge bg-danger mini-cart-qty-admake">0</span>
+                    </a>
+                    <div id="mini-cart-admake-aux" class="hidden">
+                        <vtex.cmc:miniCart />
+                        <vtex.cmc:AmountItemsInCart />
+                    </div><!-- #mini-cart-admake-aux -->
+                    <div id="mini-cart-admake" style="display: none;">
+                        <div class="mini-cart-header"></div>
+                        <div class="mini-cart-itens">
+                            <!-- recebe itens -->
+                        </div>
+                        <div class="mini-cart-footer">
+                            <div class="mini-cart-totais">
+                                <strong id="mini-cart-admake-total" class="pull-right">
+                                    <!-- recebe valor total --></strong>
+                                <span>Total</span>
+                            </div>
+                            <div class="mini-cart-botao">
+                                <a href="/checkout/#/cart" class="btn btn-block btn-verde btn-finalizar-compra">Fechar
+                                    Pedido</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .mini-cart -->
+
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .header -->
+
+</header><!-- .header-container -->
+
+<div id="extra-header-bottom"></div>
+
+
+
+
+<nav class="visible-md visible-lg d-block" id="top-menu">
+    <div class="container-fluid">
+        <div class="row">
+            <!--<vtex.cmc:departmentLinks/> -->
+            <div class="menutopo col-lg-9 pl-0">
+                <div class="menu-departamento d-flex "><span class="rt"></span><span class="rb"></span>
+                    <div class="bolas-container">
+                        <h3 class="bolas"><span></span><a class="menu-item-texto"
+                                href="https://tennisaction1.myvtex.com/bolas">Embalagens e Descartaveis</a></h3>
+                        <ul class="bolas d-none">
+                            <li><a href="https://tennisaction1.myvtex.com/bolas/tenis">Tênis</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/bolas/petecas">Petecas</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/bolas/squash">Squash</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/bolas/futebol">Futebol</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/bolas/frescobol">Frescobol</a></li>
+                        </ul>
+                    </div>
+                    <div class="acessorios-container">
+                        <h3 class="acessorios even"><span></span><a class="menu-item-texto"
+                                href="https://tennisaction1.myvtex.com/acessorios">Higiene e Limpeza</a></h3>
+                        <ul class="acessorios even d-none">
+                            <li><a href="https://tennisaction1.myvtex.com/acessorios/acessorios-para-tenis">Acessórios
+                                    para
+                                    Tênis</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/acessorios/acessorios-para-quadra">Acessórios
+                                    para
+                                    Quadra</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/acessorios/acessorios-para-corrida">Acessórios
+                                    para
+                                    Corrida</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/acessorios/protetores">Protetores</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/acessorios/musculacao-e-fitness">Musculação e
+                                    Fitness</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/acessorios/diversos">Diversos</a></li>
+                        </ul>
+                    </div>
+                    <div class="vestuario-container">
+                        <h3 class="vestuario"><span></span><a class="menu-item-texto"
+                                href="https://tennisaction1.myvtex.com/vestuario">Proteção</a></h3>
+                        <ul class="vestuario d-none">
+                            <li><a href="https://tennisaction1.myvtex.com/vestuario/masculino">Masculino</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/vestuario/masculino-infantil">Masculino
+                                    Infantil</a>
+                            </li>
+                            <li><a href="https://tennisaction1.myvtex.com/vestuario/feminino-infantil">Feminino
+                                    Infantil</a>
+                            </li>
+                            <li><a href="https://tennisaction1.myvtex.com/vestuario/bones-e-viseiras">Bonés e
+                                    Viseiras</a>
+                            </li>
+                            <li><a href="https://tennisaction1.myvtex.com/vestuario/feminino">Feminino</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/vestuario/meias">Meias</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/vestuario/vestuarios">Vestuários</a></li>
+                        </ul>
+                    </div>
+                    <div class="calcados-container">
+                        <h3 class="calcados even"><span></span><a class="menu-item-texto"
+                                href="https://tennisaction1.myvtex.com/calcados">Biodegradável</a></h3>
+                        <ul class="calcados even d-none">
+                            <li><a href="https://tennisaction1.myvtex.com/calcados/tenis">Tênis</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/calcados/corrida">Corrida</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/calcados/casual">Casual</a></li>
+                        </ul>
+                    </div>
+                    <div class="cordas-container">
+                        <h3 class="cordas"><span></span><a class="menu-item-texto"
+                                href="https://tennisaction1.myvtex.com/cordas">Maquinas e acessórios</a></h3>
+                        <ul class="cordas d-none">
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-babolat">Cordas Babolat</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-wilson">Cordas Wilson</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-gamma">Cordas Gamma</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-head">Cordas Head</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-kirschbaum">Cordas
+                                    Kirschbaum</a>
+                            </li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-luxilon">Cordas Luxilon</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-sigma">Cordas Sigma</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-signum-pro">Cordas Signum
+                                    Pro</a>
+                            </li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-prince">Cordas Prince</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-toalson">Cordas Toalson</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-tecnifibre">Cordas
+                                    Tecnifibre</a>
+                            </li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-yonex">Cordas Yonex</a></li>
+                            <li><a href="https://tennisaction1.myvtex.com/cordas/cordas-rolos">Cordas Rolos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 pr-0">
+                <div class="w-100 h-100" style="background-color: orangered;">
+
+                </div>
+            </div>
+        </div>
+    </div><!-- .container -->
+
+</nav><!-- #top-menu -->
+
+<div id="extra-banner-regua"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>

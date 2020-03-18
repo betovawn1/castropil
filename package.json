@@ -1,0 +1,24 @@
+{
+  "name": "modelo_vtex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betovawn1/modelo_Vtex.git"
+  },
+  "author": "Sergio L. Franca Jr.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betovawn1/modelo_Vtex/issues"
+  },
+  "homepage": "https://github.com/betovawn1/modelo_Vtex#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  }
+}

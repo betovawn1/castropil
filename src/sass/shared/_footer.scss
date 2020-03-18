@@ -1,0 +1,61 @@
+.footer {
+    border-top: 10px solid #0074bd;
+    border-bottom: none;
+    background-color: #f7f7f7;
+    padding: 15px 0 30px;
+        b {
+            color: #0074bd;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: 700;
+            margin-left: 0;
+            padding-left: 0;
+        }
+            .apps {
+                display: flex;
+                flex-flow: wrap;
+            }
+                .apps div{
+                    padding-left: 15px;
+                }
+                    .televendas {
+                        background-color: #0074bd;
+                        height: 120px;
+                        border-radius: 10px;
+                        text-align: center;
+                        color: white;
+                        font-family: Arial;
+                    }
+                        .televendas-inside {
+                            contain: content;
+                        }
+                            .televendas-inside span{
+                                color: white;
+                                font-size: 23px;
+                            }
+
+                                    .televendas-inside a{
+                                        font-weight: 700;
+                                        color: white;
+                                        font-size: 14px;
+                                        text-decoration: underline;
+                                    }
+                                        .televendas h3{
+                                            font-weight: bold;
+                                        }
+                                            .col-social ul{
+                                                display: flex;
+                                            }
+                                                .col-social a{
+                                                    display: unset;
+                                                }
+                                                .col-lojas li{
+                                                    line-height: 2;
+                                                }
+
+                                                    .col-lojas strong{
+                                                        color: #0074bd;
+                                                    }
+
+
+}
