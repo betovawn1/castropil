@@ -1,0 +1,100 @@
+#home-content{
+
+        #Colecao1 h3 {
+            color: #535353;
+            font-family: Verdana;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+        }
+            
+            #Colecao1 h3:after {
+                    content: "DESTAQUES";
+                    display: block;
+                    background-color: rgb(255, 255, 255);
+                    position: relative;
+                    width: 20%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                    #Colecao1 > h3:before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        position: absolute;
+                        top: 11px;
+                        background-color: #ff700f;
+                    }
+                        #Colecao2 > h3:after {
+                            content: 'Lançamentos';
+                            display: block;
+                            background-color: #fff;
+                            position: relative;
+                            width: 20%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                            #Colecao2 > h3:before {
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                position: absolute;
+                                top: 11px;
+                                background-color: #ff700f;
+                            }
+                                #Colecao2 h3 {
+                                    color: #535353;
+                                    font-family: Verdana;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    text-align: center;
+                                    position: relative;
+                                }
+
+                                    .footer-newsform .news-titulo {
+                                        height: 20px;
+                                        position: relative;
+                                    }
+                                        .footer-newsform .news-titulo span {
+                                            color: #535353;
+                                            font-family: Verdana;
+                                            font-size: 20px;
+                                            font-weight: 700;
+                                            text-transform: uppercase;
+                                            position: absolute;
+                                            z-index: 1;
+                                            background-color: #fff;
+                                            width: 20%;
+                                            display: block;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                            text-align: center;
+                                        }
+                                            .footer-newsform .news-titulo:after {
+                                                content: '';
+                                                display: block;
+                                                width: 100%;
+                                                height: 2px;
+                                                background-color: #ff700f;
+                                                position: absolute;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                            }
+                        
+
+        
+
+
+
+
+
+        
+
+        
+    
+}

@@ -1,0 +1,108 @@
+<!-- 
+ *
+ * Desenvolvido por Integrando.se
+ * hello@integrando.se
+ * 
+ * Bootstrap v.3
+ *
+ -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <title> Modelo Vtex</title>
+    <vtex:metaTags />
+    <vtex:template id="commonStyles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body id="home-page">
+
+    <div class="page">
+
+        <!--  SubTemplate: Header -->
+        <vtex:template id="Header" />
+        <!-- /SubTemplate: Header -->
+
+        <div id="home-extra-top"></div>
+
+        <section id="home-content" class="container-fluid">
+
+            <div id="category-extra-middle"></div>
+
+            <div class="fullbanner">
+                <vtex:contentPlaceHolder id="bannersegmentado" />
+            </div><!-- .fullbanner -->
+
+            <div class="container">
+                <div class="regua">
+                    <vtex:contentPlaceHolder id="regua" />
+                </div>
+
+                <div id="Colecao1">
+                    <h3></h3>
+                    <div class="showcase-default showcase-owl">
+                        <vtex:contentPlaceHolder id="Lancamentos" />
+                    </div>
+                </div>
+
+                <div class="container bottombanner-container">
+                    <div class="bottombanner">
+                        <vtex:contentPlaceHolder id="bannerbottomhome" />
+                    </div>
+                </div>
+
+                <div id="Colecao2">
+                    <h3></h3>
+                    <div class="showcase-default showcase-owl">
+
+                        <vtex:contentPlaceHolder id="Beach-Tennis" />
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="footer-newsform container">
+                <div class="news-titulo">
+                    <span>NEWSLETTER</span>
+                </div>
+                <div class="newsletter" id="newsletterForm">
+                    <div class="newsletter-icon">
+                        <img src="/arquivos/newsletter-icon.png" />
+                    </div>
+                    <fieldset>
+                        <p>Cadastre-se e receba em seu e-mail novidades, promoções e ofertas da loja</p>
+                        <div>
+                            <input id="newsletterClientName" onfocus="newsSelect(this,'Digite seu nome');"
+                                onblur="newsLeave(this,'Digite seu nome');" class="newsletter-client-name"
+                                placeholder="Digite seu nome" size="20" type="text" name="newsClientName" />
+                            <input id="newsletterClientEmail" onfocus="newsSelect(this,'Digite seu e-mail');"
+                                onblur="newsLeave(this,'Digite seu e-mail');" class="newsletter-client-email"
+                                placeholder="Digite seu e-mail" size="20" type="text" name="newsletterClientEmail" />
+                            <input id="newsletterButtonOK" class="btn-ok newsletter-button-ok" value="assinar"
+                                type="button" name="newsletterButtonOK" />
+                        </div>
+                        <p style="display: none;" class="newsSucess">Inscrição realizada com sucesso!</p>
+                        <p style="display: none;" class="newsError">Insira um endereço de e-mail correto.</p>
+                    </fieldset>
+                </div>
+            </div>
+
+        </section><!-- #content -->
+
+        <div id="category-extra-bottom"></div>
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="Footer" />
+        <!-- /SubTemplate: Footer -->
+
+    </div><!-- .container-fluid -->
+
+</body>
+<vtex:template id="commonScripts" />
+
+</html>
