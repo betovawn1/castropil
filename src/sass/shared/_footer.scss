@@ -3,6 +3,7 @@
     border-bottom: none;
     background-color: #f7f7f7;
     padding: 15px 0 30px;
+    border-bottom: 10px solid #dadada;
         b {
             color: #0074bd;
             font-family: Verdana;
@@ -11,51 +12,68 @@
             margin-left: 0;
             padding-left: 0;
         }
-            .apps {
-                display: flex;
-                flex-flow: wrap;
+            &:before {
+                content: ">> ";
+                font-size: 17px;
+                letter-spacing: -7px;
+                padding-right: 10px;
             }
-                .apps div{
-                    padding-left: 15px;
+                .apps {
+                    display: flex;
+                    flex-flow: wrap;
                 }
-                    .televendas {
-                        background-color: #0074bd;
-                        height: 120px;
-                        border-radius: 10px;
-                        text-align: center;
-                        color: white;
-                        font-family: Arial;
+                    .apps div{
+                        padding-left: 15px;
                     }
-                        .televendas-inside {
-                            contain: content;
+                    .col-inst-duvidas{
+                        li{
+                        list-style: disc;}
                         }
-                            .televendas-inside span{
-                                color: white;
-                                font-size: 23px;
-                            }
+                    
+                        .televendas {
+                            background-color: #0074bd;
+                            height: 120px;
+                            border-radius: 10px;
+                            text-align: center;
+                            color: white;
+                            font-family: Arial;
+                                h3{
+                                    font-weight: bold;
+                                }
 
-                                    .televendas-inside a{
-                                        font-weight: 700;
-                                        color: white;
-                                        font-size: 14px;
-                                        text-decoration: underline;
-                                    }
-                                        .televendas h3{
-                                            font-weight: bold;
-                                        }
-                                            .col-social ul{
-                                                display: flex;
+                                        .televendas-inside {
+                                                contain: content;
                                             }
-                                                .col-social a{
-                                                    display: unset;
-                                                }
-                                                .col-lojas li{
-                                                    line-height: 2;
+                                                .televendas-inside span{
+                                                    color: white;
+                                                    font-size: 23px;
                                                 }
 
-                                                    .col-lojas strong{
-                                                        color: #0074bd;
+                                                        .televendas-inside a{
+                                                            font-weight: 700;
+                                                            color: white;
+                                                            font-size: 14px;
+                                                            text-decoration: underline;
+                                                        }
                                                     }
+                                                            .col-social ul{
+                                                                display: flex;
+                                                            }
+                                                                .col-social a{
+                                                                    display: unset;
+                                                                }
+                                                                .col-lojas{
+                                                                
+                                                                li{
+                                                                    line-height: 2;
+                                                                    list-style: disc;
+                                                                    color: #0074bd;
+                                                                }
+
+                                                                    strong{
+                                                                        color: #0074bd;
+                                                                    }
+                                                                }
 
 
 }
@@ -65,10 +83,11 @@
         color: black;
         font-size: 12px;
         font-weight: 200;
-        line-height: 16px;
+        line-height: 20px;
         font-family: arial;
     }
         &strong{
             font-weight: bold;
         }
 }
+
