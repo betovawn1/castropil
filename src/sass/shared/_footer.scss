@@ -11,19 +11,21 @@
             font-weight: 700;
             margin-left: 0;
             padding-left: 0;
-        }
+        
             &:before {
                 content: ">> ";
                 font-size: 17px;
                 letter-spacing: -7px;
                 padding-right: 10px;
             }
+        }
+         
                 .apps {
                     display: flex;
                     flex-flow: wrap;
                 }
                     .apps div{
-                        padding-left: 15px;
+                        padding-left: 40px;
                     }
                     .col-inst-duvidas{
                         li{
