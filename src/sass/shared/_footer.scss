@@ -13,10 +13,11 @@
             padding-left: 0;
         
             &:before {
-                content: ">> ";
+                content: "";
                 font-size: 17px;
                 letter-spacing: -7px;
                 padding-right: 10px;
+                background-image: url(/arquivos/list.png);
             }
         }
          
