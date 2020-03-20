@@ -23,13 +23,23 @@
                 .apps {
                     display: flex;
                     flex-flow: wrap;
+                    @media(max-width: 992px){
+                        text-align: -webkit-center;
+                        justify-content: center;
+                    }
                 }
                     .apps div{
                         padding-left: 40px;
+                        @media(max-width: 768px){
+                            padding-left: 55px;
+                        }
                     }
                     .col-inst-duvidas{
                         li{
                         list-style: disc;}
+                        @media(max-width: 798px){
+                            text-align: center;
+                        }
                         }
                     
                         .televendas {
@@ -81,6 +91,9 @@
 }
 
 .copy-right{
+    @media(max-width: 992px){
+        text-align: center;
+    }
     p{
         color: black;
         font-size: 12px;
