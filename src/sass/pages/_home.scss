@@ -1,93 +1,4 @@
 #home-content{
-    #Colecao1{
-        position: relative;
-    }
-
-        #Colecao1 h3 {
-            color: white;
-            font-family: Verdana;
-            font-size: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-align: center;
-            position: relative;
-        }
-        
-        div#Colecao1:after {
-            content: '';
-            display: block;
-            width: 37%;
-            height: 2px;
-            position: absolute;
-            top: 20px;
-            background-color: #ff700f;
-            right: 0;
-        }
-            #Colecao1 h3:after {
-                content: "DESTAQUES";
-                display: block;
-                background-color: #ff700f;
-                border-radius: 10px;
-                height: 40px;
-                position: relative;
-                width: 210px;
-                left: 50%;
-                transform: translateX(-50%);
-                line-height: 200%;
-                }
-                    #Colecao1 > h3:before {
-                        content: '';
-                        display: block;
-                        width: 37%;
-                        height: 2px;
-                        position: absolute;
-                        top: 50%;
-                        background-color: #ff700f;
-                    }
-                        #Colecao2 > h3:after {
-                            content: 'Lançamentos';
-                            display: block;
-                            background-color: #ff700f;
-                            border-radius: 10px;
-                            height: 40px;
-                            position: relative;
-                            width: 210px;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            line-height: 200%;
-                        }
-                            #Colecao2 > h3:before {
-                                content: '';
-                                display: block;
-                                width: 37%;
-                                height: 2px;
-                                position: absolute;
-                                top: 50%;
-                                background-color: #ff700f;
-                            }
-                            div#Colecao2 {
-                                position: relative;
-                            }
-                            div#Colecao2:after {
-                                content: '';
-                                display: block;
-                                width: 37%;
-                                height: 2px;
-                                position: absolute;
-                                top: 20px;
-                                background-color: #ff700f;
-                                right: 0;
-                            }
-
-                                #Colecao2 h3 {
-                                    color: white;
-                                    font-family: Verdana;
-                                    font-size: 20px;
-                                    font-weight: 700;
-                                    text-transform: uppercase;
-                                    text-align: center;
-                                    position: relative;
-                                }
                                 .footer-newsform{ 
                                     
                                         text-align: center;
@@ -102,7 +13,7 @@
                                         }
                                             .news-titulo span {
                                                 background-color: #ff700f;
-                                                color: white;
+                                                color: $color-light;
                                                 border-radius: 10px;
                                                font-family: Verdana;
                                                font-size: 20px;
