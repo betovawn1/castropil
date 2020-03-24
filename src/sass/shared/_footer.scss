@@ -1,11 +1,11 @@
 .footer {
-    border-top: 10px solid #0074bd;
+    border-top: 10px solid $color-secondary;
     border-bottom: none;
     background-color: #f7f7f7;
     padding: 15px 0 30px;
     border-bottom: 10px solid #dadada;
         b {
-            color: #0074bd;
+            color: $color-secondary;
             font-family: Verdana;
             font-size: 18px;
             font-weight: 700;
@@ -21,33 +21,47 @@
                 background-repeat: no-repeat;
                 padding-left: 10px;
             }
-        }
-         
+        } 
+            .col-inst-duvidas{
+                li{
+                list-style: disc;}
+                @media(max-width: 798px){
+                    text-align: center;
+                }
+            }
                 .apps {
-                    display: flex;
-                    flex-flow: wrap;
+                    .col-social{
+                        margin: 15px;
+                        margin-top: 0;
+                        width: 170px;
+                        @media(max-width: 768px){
+                            margin: 0;
+                        }
+                            a{
+                                width: unset;
+                                height: max-content;
+                            }
+                            @media(max-width: 992px){
+                                text-align: -webkit-center;
+                                justify-content: center;
+                            }
+                        
+                    }
                     @media(max-width: 992px){
                         text-align: -webkit-center;
                         justify-content: center;
                     }
-                }
+                   
                     .apps div{
-                        padding-left: 40px;
-                        @media(max-width: 768px){
-                            padding-left: 55px;
+                            padding-left: 40px;
+                            @media(max-width: 768px){
+                                padding-left: 55px;
+                            }
                         }
-                    }
-                    .col-inst-duvidas{
-                        li{
-                        list-style: disc;}
-                        @media(max-width: 798px){
-                            text-align: center;
-                        }
-                        }
-                    
+                } 
+                   .col-televendas{
                         .televendas {
-                            background-color: #0074bd;
-                            height: 120px;
+                            background-color: $color-secondary;
                             border-radius: 10px;
                             text-align: center;
                             color: white;
@@ -55,41 +69,33 @@
                                 h3{
                                     font-weight: bold;
                                 }
-
-                                        .televendas-inside {
-                                                contain: content;
+                                    .televendas-inside {
+                                        contain: content;
+                                        span{
+                                            color: white;
+                                            font-size: 23px;
+                                        } 
+                                            a{
+                                                font-weight: 700;
+                                                color: white;
+                                                font-size: 14px;
+                                                text-decoration: underline;
                                             }
-                                                .televendas-inside span{
-                                                    color: white;
-                                                    font-size: 23px;
-                                                }
+                                    }                              
+                        }
+                    }                  
+                        .col-lojas{
+                            li{
+                              line-height: 2;
+                              list-style: disc;
+                              color: $color-secondary;
+                            }
+                                strong{
+                                  color: $color-secondary;
+                                }
+                        }
 
-                                                        .televendas-inside a{
-                                                            font-weight: 700;
-                                                            color: white;
-                                                            font-size: 14px;
-                                                            text-decoration: underline;
-                                                        }
-                                                    }
-                                                            .col-social ul{
-                                                                display: flex;
-                                                            }
-                                                                .col-social a{
-                                                                    display: unset;
-                                                                }
-                                                                .col-lojas{
-                                                                
-                                                                li{
-                                                                    line-height: 2;
-                                                                    list-style: disc;
-                                                                    color: #0074bd;
-                                                                }
-
-                                                                    strong{
-                                                                        color: #0074bd;
-                                                                    }
-                                                                }
-
+                                                               
 
 }
 
