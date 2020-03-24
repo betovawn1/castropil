@@ -1,7 +1,7 @@
 .footer {
     border-top: 10px solid $color-secondary;
     border-bottom: none;
-    background-color: #f7f7f7;
+    background-color: $color-light-grey;
     padding: 15px 0 30px;
     border-bottom: 10px solid #dadada;
         b {
@@ -64,7 +64,7 @@
                             background-color: $color-secondary;
                             border-radius: 10px;
                             text-align: center;
-                            color: white;
+                            color: $color-light;
                             font-family: Arial;
                                 h3{
                                     font-weight: bold;
@@ -72,12 +72,12 @@
                                     .televendas-inside {
                                         contain: content;
                                         span{
-                                            color: white;
+                                            color: $color-light;
                                             font-size: 23px;
                                         } 
                                             a{
                                                 font-weight: 700;
-                                                color: white;
+                                                color: $color-light;
                                                 font-size: 14px;
                                                 text-decoration: underline;
                                             }
@@ -104,7 +104,7 @@
         text-align: center;
     }
     p{
-        color: black;
+        color: $color-dark;
         font-size: 12px;
         font-weight: 200;
         line-height: 20px;
