@@ -68,6 +68,7 @@
                             font-family: Arial;
                                 h3{
                                     font-weight: bold;
+                                    padding-top: 20px;
                                 }
                                     .televendas-inside {
                                         contain: content;
@@ -89,6 +90,7 @@
                               line-height: 2;
                               list-style: disc;
                               color: $color-dark;
+                              font-size: $text-size-5;
 
                             }
                                 strong{
