@@ -1,0 +1,71 @@
+.prateleira{
+  h2{
+    display: none;
+  }
+    li{    
+        width: 25% !important;
+    }
+      .box-item {
+        border: 1px solid transparent;
+        border-bottom: 5px solid transparent;
+          &:hover{
+            border-color: #d0d0d0;
+          }
+          .product-image:after{
+          display: none;
+        }
+        
+       .product-name{ 
+              a{
+                color: black;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 20px;
+                display: block;
+                font-family: Verdana;
+                text-align: initial;
+                margin-bottom: 5px;
+              }
+          }
+      }
+      .box-item:hover img {
+        opacity: 100% !important;
+    }
+      .price{
+        text-align: initial;
+        span.best-price{
+          display: block;
+          color: #0a80c5;
+          font-size: 23px;
+          font-weight: 700;
+          font-family: Verdana;
+          &:before {
+            content: "Por apenas:";
+            display: block;
+            color: black;
+            font-size: 12px;
+            font-weight: 100;
+            margin-bottom: 3px;
+        }
+        }
+      }
+      .wrapper-buy-button-asynchronous{
+        a{
+          cursor: pointer;
+          width: 100%;
+          text-align: center;
+          color: $color-light;
+          font-size: 16px;
+          text-transform: uppercase;
+          font-weight: bold;
+          height: 38px;
+          background-color: $color-primary;
+          margin-top: 15px;
+            &:hover{
+              background-color: $color-primary;
+            }
+        }
+      }  
+      
+    
+    }
