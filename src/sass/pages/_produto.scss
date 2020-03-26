@@ -1,0 +1,315 @@
+#product-content{
+
+    .codigo-produto .avaliacoes {
+        display: block;
+        width: 100%;
+        margin-left: 0 !important;
+    }
+        .avaliacoes{
+            margin-left: 130px;
+        }
+
+        .product-details {
+            margin: 0;
+            .product-name .productName {
+            color: #474747;
+            font-size: 25px;
+            width: 100%;
+            font-weight: bold;
+            line-height: 25px;
+            }
+                .codigo-produto {
+                    padding-left: 0;
+                    &span {
+                        font-size: 13px;
+                    }
+                }
+                    .product-image{
+                        padding-left: 0;
+                    }
+
+                        .price-box {
+                            padding: 0;
+                            .descricao-preco{ 
+                                .valor-por{
+                                    strong {
+                                        font-size: 35px;
+                                        color: $color-secondary;
+                                        }
+                                }
+                                    .valor-dividido{
+                                        display: block !important;
+                                        font-size: 25px;
+                                        margin-top: 15px;
+                                        color: $color-secondary;
+                                        font-style: normal;
+                                        .skuBestInstallmentNumber{
+                                            font-weight: bolder;
+                                        }
+                                        
+                                    }
+
+                                        }
+                                    }
+
+                                    .seletor-sku {
+                                        margin-top: 0px;
+                                        margin-bottom: 0;
+                                            > h5 {
+                                                color: #535353;
+                                                font-family: "Arial";
+                                                font-size: 12px;
+                                                font-weight: 400;
+                                                text-transform: uppercase;
+                                            }
+                                                    .skuList .nomeSku {
+                                                        width: 33px;
+                                                        height: 25px;
+                                                        border: 1px solid #d0d0d0;
+                                                        background-color: $color-light;
+                                                        color: #535353;
+                                                        font-family: "Arial";
+                                                        font-size: 12px;
+                                                        font-weight: 400;
+                                                        text-align: center;
+                                                        line-height: 25px
+                                                    }
+                                        }
+                                                            /* botão comprar */
+
+                                                             .buy-button-box {
+                                                                background-color: $color-primary;
+                                                                height: 60px;
+                                                                position: relative;
+                                                                width: 60%;
+                                                                text-align: center;
+                                                                    input {
+                                                                        display: none !important;
+                                                                    }
+                                                                        a{
+                                                                            color: $color-light;
+                                                                            font-size: 22px;
+                                                                            font-family: verdana;
+                                                                            width: 100%;
+                                                                            height: 100%;
+                                                                            position: absolute;
+                                                                            left: 0;
+                                                                            text-decoration: none;
+                                                                            font-weight: bolder;
+                                                                            line-height: 60px;
+                                                                            text-transform: uppercase;
+                                                                        }
+                                                                        
+                                                            } 
+
+        .product-info {
+            .codigo-avaliacoes {
+                border-bottom: 1px solid #d0d0d0;
+                margin: 0 !important
+            }            
+                    .pronta-entrega {
+                        color: $color-secondary;
+                        font-family: "Arial";
+                        font-size: 12px;
+                        font-weight: bolder;
+                        display: inline-block;
+                        width: 30%;
+                    }
+        }
+        
+                        .shipping-box-title {
+                            color: #000000;
+                            font-family: "Arial";
+                            font-size: 14px;
+                            font-weight: 400;
+                            width: 150px;
+                            background: #e6e6e6;
+                            text-align: center;
+                            height: 35px;
+                            line-height: 35px;
+                            border-bottom: 1px solid #bfbfbf;
+                            margin-top: 25px
+                        }
+                                .shipping-box {
+                                    background: #e6e6e6;
+                                    padding-top: 0 !important;
+                                    padding-bottom: 15px;
+                                    padding-left: 15px;
+                                        #popupCalculoFreteWrapper {
+                                            display: none
+                                        }
+                                            #calculoFrete{ 
+                                                .content{
+                                                    fieldset{
+                                                        .prefixo {
+                                                            font-size: 0;
+                                                                input {
+                                                                    border-radius: 0;
+                                                                    border: 1px solid #bfbfbf;
+                                                                    width: 150px;
+                                                                    text-align: right;
+                                                                    font-size: 12px;
+                                                            }
+                                                        }
+                                                                        .frete-calcular #btnFreteSimulacao {
+                                                                            width: 46px;
+                                                                            height: 40px;
+                                                                            background-color: #e96800;
+                                                                            border-radius: 0;
+                                                                            color: #ffffff;
+                                                                            font-family: "Arial";
+                                                                            font-size: 16px;
+                                                                            font-weight: 400;
+                                                                            text-transform: uppercase;
+                                                                        }
+                                                                
+                                                                                .cep-busca > a {
+                                                                                    color: #000000;
+                                                                                    font-family: "Arial";
+                                                                                    font-size: 14px;
+                                                                                    font-weight: 400;
+                                                                                    margin-left: 5px;
+                                                                                }
+
+                                    }  
+                            }
+                        }
+            
+            }
+            
+            
+
+            
+
+
+
+
+
+
+}
+
+
+.product-description {
+
+    .btn-group {
+    display: none !important;  
+    }
+        .product-description-box {
+            h4, .title, #divTitulo {
+                padding-top: 10px !important;
+            }
+
+                .title {
+                    border: 1px solid #d0d0d0;
+                    width: 120px;
+                    padding-top: 10px;
+                    border-bottom: 0;
+                    text-transform: uppercase;
+                    color: #535353;
+                    font-family: "Arial";
+                    font-size: 12px;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                    position: relative;
+                    bottom: -1px;
+                    background-color: #fff;
+                }
+        }
+                    .productDescription {
+                        border-top: 1px solid #d0d0d0;
+                        padding-top: 15px;
+                        text-align: justify;
+                    }
+
+}
+
+
+
+
+
+
+
+
+#reviews #lnkPubliqueResenha {
+    background-color: #e96800; 
+}
+
+
+
+
+
+
+.lateral-prateleira {
+    > h2 {
+    display: none
+    }
+        li {
+            width: 33%;
+            float: left;
+            padding: 0;
+            width: 100%;
+            @media (max-width: 992px) {
+                    width: 50%;
+                    float: left
+            }
+            @media (max-width: 768px) {
+                    width: 100%;
+                    float: left
+            }
+                
+            
+        }
+            .box-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                            
+                .product-image {
+                    display: inline-block;
+                    width: 30%; 
+                    > img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+                    .product-data {
+                    display: inline-block;
+                    width: 70%;
+                        .product-name, .price {
+                                display: block;
+                                text-align: left;
+                                padding-left: 20px
+                           }
+                                .out-of-stock {
+                                    padding-left: 20px;
+                                    font-size: 12px;
+                                }
+                                    .price > a {
+                                        text-decoration: none !important;
+                                    }
+                                        .product-name {
+                                            padding-bottom: 24px;
+                                            a {
+                                                color: #535353;
+                                                font-family: Verdana;
+                                                font-size: 12px;
+                                                font-weight: 400;
+                                            }
+                                        }
+                        }    
+            }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
