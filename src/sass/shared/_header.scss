@@ -1,25 +1,66 @@
-
-
-.header{
-    .topdiv{
-        height: 5px;
-        width: 100%;
-        background-color: orangered;
+nav {
+    .custom-col-menu,
+    .custom-col-minicart {
+        min-height: 80px;
+        position: relative
     }
-            .sing-in .btn-group a{
-                padding: 0;
-                border: 0;
-            }
-                fieldset select#ftDeptae72997fde314d4e83c7c3caef4563b7{
-                    display: unset !important;
-                }
-}
 
-nav#top-menu{
-
-    background-color: #0074bd;
-
-        h3 a{
-            color: white;
+    .custom-col-minicart {
+        &:after {
+            content: '';
+            top: 0;
+            right: -100%;
+            position: absolute;
+            width: 100%;
+            min-height: 80px;
+            display: block;
+            background-color: $color-primary;
         }
+
+        > div {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        button {
+            .badge {
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+                left: 0;
+                width: 21px;
+                height: 21px;
+                line-height: 21px;
+            }
+        }
+
+        /* Custom Bootstrap */
+        @media (min-width: 992px) {
+            -ms-flex: 0 0 12%;
+            flex: 0 0 12%;
+            max-width: 12%;
+        }
+    }
+
+    .custom-col-menu {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        &:before {
+            content: '';
+            top: 0;
+            left: -100%;
+            position: absolute;
+            width: 100%;
+            min-height: 80px;
+            display: block;
+            background-color: $color-secondary;
+        }
+
+        /* Custom Bootstrap */
+        @media (min-width: 992px) {
+            -ms-flex: 0 0 88%;
+            flex: 0 0 88%;
+            max-width: 88%;
+        }
+    }
 }
