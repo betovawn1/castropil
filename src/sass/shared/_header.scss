@@ -1,3 +1,110 @@
+header {
+    .search {
+        .busca {
+            height: 49px;
+            margin-top: 3px;
+
+            &::after {
+                content: '►';
+                font-size: 12px;
+                position: absolute;
+                top: 39%;
+                left: 62%;
+                color: $color-grey;
+                font-weight: 500;
+                font-family: initial;
+                transform: rotate(90deg) translateY(-50%);
+            }
+                
+            &::before {
+                content: '';
+                width: 10%;
+                height: 49px;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(-1px);
+                background-image: url(//castropil.vteximg.com.br/arquivos/search.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                z-index: 1;
+                background-color: $color-primary;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+
+            select {
+                display: inline-block !important;
+                width: 30%;
+                position: absolute;
+                left: 60%;
+                border-radius: 0;
+                height: 49px;
+                -webkit-appearance: none;
+                padding: 0 45px;
+                margin-left: -1px;
+                background-color: transparent;
+                outline: 0;
+                border-color: $color-medium-grey;
+                color: $color-grey;
+                font-weight: 500;
+            }
+
+            .fulltext-search-box {
+                display: inline-block;
+                width: 60%;
+                position: absolute;
+                left: 0;
+                margin: 0;
+                border-right: 0;
+                border-radius: 0;
+                height: 49px;
+                margin-left: -1px;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+                outline: 0;
+                border-color: $color-medium-grey;
+                color: $color-grey;
+                font-weight: 500;
+                padding: 0 20px;
+            }
+
+            .btn-buscar {
+                display: inline-block;
+                width: 10%;
+                position: absolute;
+                left: 90%;
+                border-left: 0;
+                border-radius: 0;
+                height: 49px;
+                background-color: transparent;
+                border: 0;
+                color: $color-light;
+                margin-left: -1px;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                outline: 0;
+                font-size: 0;
+                z-index: 1;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, .3);
+                }
+            }
+        }
+    }
+
+    .custom-row-contact {
+        border-left: 1px solid $color-medium-grey;
+        height: 49px;
+
+        p {
+            max-width: 170px;
+        }
+    }
+}
+
 nav {
     .custom-col-menu,
     .custom-col-minicart {
@@ -9,9 +116,9 @@ nav {
         &:after {
             content: '';
             top: 0;
-            right: -100%;
+            right: -1999%;
             position: absolute;
-            width: 100%;
+            width: 2000%;
             min-height: 80px;
             display: block;
             background-color: $color-primary;
@@ -48,9 +155,9 @@ nav {
         &:before {
             content: '';
             top: 0;
-            left: -100%;
+            left: -499%;
             position: absolute;
-            width: 100%;
+            width: 500%;
             min-height: 80px;
             display: block;
             background-color: $color-secondary;
@@ -61,6 +168,60 @@ nav {
             -ms-flex: 0 0 88%;
             flex: 0 0 88%;
             max-width: 88%;
+        }
+    }
+
+    .menu-departamento {
+        > div {
+            &:hover {
+                .dropdown {
+                    display: flex !important;
+                }
+            }
+            &:nth-child(2) {
+                .dropdown {
+                    transform: translateX(-30%);
+                }
+            }
+            &:nth-child(3) {
+                .dropdown {
+                    transform: translateX(-50%);
+                }
+            }
+            &:nth-child(4) {
+                .dropdown {
+                    transform: translateX(-60%);
+                }
+            }
+            &:nth-child(5) {
+                .dropdown {
+                    left: unset !important;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 1;
+        background-color: $color-light;
+        min-width: 880px;
+        border-top: 10px solid $color-secondary;
+        border-bottom: 10px solid $color-primary;
+        ul {
+            li {
+                margin-bottom: 5px;
+                span {
+                    color: $color-primary;
+                    margin-right: 5px;
+                }
+                a {
+                    color: $color-dark;
+                }
+            }
         }
     }
 }

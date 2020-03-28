@@ -18,3 +18,7 @@
 @import './pages/quem-somos';
 @import './pages/nossas-lojas';
 @import './pages/institucional';
+
+body {
+    overflow-x: hidden;
+}
