@@ -4,7 +4,19 @@ document.querySelector('.custom-col-minicart').addEventListener('click', functio
 document.querySelector('#minicart .custom-minicart-footer .custom-minicart-buttons button').addEventListener('click', function(ev){
     document.getElementById('minicart').classList.remove('d-block')
 })
-console.log('funfando')
+document.getElementById('menu-hamburguer').addEventListener('click', function(ev) {
+    this.parentNode.classList.toggle('checked')
+    document.getElementById('menu-mobile').classList.toggle('d-block')
+    document.getElementsByTagName('body')[0].classList.toggle('overflow-hidden')
+})
+document.getElementById('menu-mobile')
+    .querySelectorAll('.recebe-menu h3')
+        .forEach(function(title_mobile) {
+            title_mobile.addEventListener('click', function(ev) {
+                this.classList.toggle('clicked')
+                this.nextElementSibling.classList.toggle('d-block')
+            })
+        })
 // init
 function getOrder(){
     console.log('getOrder')
@@ -39,7 +51,7 @@ function getOrder(){
                                         <div class="item-price"><span class="mr-2">Por apenas:</span>R$ ${price.toLocaleString({ style: 'currency', currency: 'pt-BR' })}</div>
                                         <span class="mini-cart-box-qtd" item-position="${counter}">
                                             <button class="mini-cart-btn-qtd mini-cart-btn-minus">-</button>
-                                            <input type="text" class="mini-cart-qtd" value="${el.quantity}" />
+                                            <input type="text" class="mini-cart-qtd d-inline-block" value="${el.quantity}" />
                                             <button class="mini-cart-btn-qtd mini-cart-btn-plus">+</button>
                                         </span>
                                     </div>
@@ -54,7 +66,10 @@ function getOrder(){
                 ++ counter
             })        
         } else {
-            customMinicartBody.innerHTML = ''
+            customMinicartBody.innerHTML = `
+                <div class="d-flex align-items-center justify-content-center w-100 h-100 px-4">
+                    <img src="./arquivos/minicart-void.jpg" class="img-fluid" />
+                </div>`
         }
 
         //quantidade
@@ -84,8 +99,13 @@ function getOrder(){
         
         //valor total
         let n = totalPrice.toString()
-        let price = n.replace(n.substr(n.length - 2), `,${n.substr(n.length - 2)}`)
-        document.querySelector('.custom-minicart-totals .total span').innerHTML = price
+        console.log('Total Price ', totalPrice)
+        if (totalPrice == 0) {
+            document.querySelector('.custom-minicart-totals .total span').innerHTML = 0
+        } else {
+            let price = n.replace(n.substr(n.length - 2), `,${n.substr(n.length - 2)}`)
+            document.querySelector('.custom-minicart-totals .total span').innerHTML = price
+        }
     })
 }
 
@@ -110,3 +130,30 @@ function deleteItem(itemPosition, quantity){
 }
 
 getOrder()
+
+document.querySelectorAll('.box-item .buy-button-showcase-shelf').forEach(function(button) {
+    button.addEventListener('click', function(ev) {
+        vtexjs.checkout.getOrderForm({
+            cache: !1
+        }).done(function(a) {
+            let item = {
+                id: parseInt(button.parentNode.getAttribute('data-sku')),
+                quantity: 1, //Standard
+                seller: 1 //Unique
+            }
+
+            console.log([item])
+        
+            vtexjs.checkout.addToCart([item])
+                .done(function(orderForm){
+                    console.log(orderForm)
+                    getOrder()
+
+                    document.querySelector('.custom-col-minicart').click()
+                })
+                .catch(function() {
+                    alert('Erro ao tentar inserir o produto no carrinho')
+                })
+        })
+    })
+})

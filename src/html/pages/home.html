@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
     xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
-
     <head>
-        <title> Modelo Vtex</title>
+        <title>Castropil</title>
         <vtex:metaTags />
         <vtex:template id="commonStyles" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
 
     <body id="home-page">
-
         <div class="page">
-
             <!--  SubTemplate: Header -->
             <vtex:template id="Header" />
             <!-- /SubTemplate: Header -->
 
-            <div id="home-extra-top"></div>
-
             <section id="home-content" class="container-fluid">
-
-                <div id="category-extra-middle"></div>
-
-                <div class="fullbanner">
-                    <vtex:contentPlaceHolder id="bannersegmentado" />
-                </div><!-- .fullbanner -->
+                <div class="row">
+                    <div class="fullbanner">
+                        <picture>
+                            <source media="(min-width: 575px)" srcset="./arquivos/banner_top_desktop.jpg" />
+                            <source media="(min-width: 0px)" srcset="./arquivos/banner_top_mobile.jpg" />
+                            <img src="./arquivos/banner_top_desktop.jpg" alt="Castropil" />
+                        </picture>
+                    </div><!-- .fullbanner -->
+                </div>
 
                 <div class="container">
-                    <div class="regua">
-                        <vtex:contentPlaceHolder id="regua" />
+                    <div class="ruler row flex-wrap align-items-center justify-content-center justify-content-lg-between mt-3 mx-auto">
+                        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center justify-content-center">
+                            <img src="./arquivos/ruler-1.png" />
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex align-items-center justify-content-center mt-3 mt-sm-0">
+                            <img src="./arquivos/ruler-2.png" />
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex align-items-center justify-content-center mt-3 m-lg-0">
+                            <img src="./arquivos/ruler-3.png" />
+                        </div>
                     </div>
 
                     <div id="Colecao1">
                         <!-- Custom Title Colecao - Init -->
-                        <div class="custom-title-colecao p-relative d-flex flex-row justify-content-center mt-5">
+                        <div class="custom-title-colecao p-relative d-flex flex-row justify-content-center mt-4">
                             <span class="custom-bg-color-light px-3 custom-z-index-1">
                                 <h3 class="text-uppercase d-inline-block mb-0 custom-bg-color-primary custom-text-8 custom-text-color-light p-3 custom-rounded-1 font-weight-bolder">destaques</h3>
                             </span>
                         </div>
                         <!-- Custom Title Colecao - End -->
-                        <div class="showcase-default showcase-owl">
+                        <div class="main-showcase">
                             <vtex:contentPlaceHolder id="Lancamentos" />
                         </div>
                     </div>
 
                     <div class="container bottombanner-container">
                         <div class="bottombanner">
-                            <vtex:contentPlaceHolder id="bannerbottomhome" />
+                            <picture>
+                                <source media="(min-width: 575px)" srcset="./arquivos/banner_vitrine_desktop.jpg" />
+                                <source media="(min-width: 0px)" srcset="./arquivos/banner_vitrine_mobile.jpg" />
+                                <img src="./arquivos/banner_vitrine_desktop.jpg" alt="Oferta" />
+                            </picture>
                         </div>
                     </div>
 
@@ -55,11 +65,11 @@
                         <!-- Custom Title Colecao - Init -->
                         <div class="custom-title-colecao p-relative d-flex flex-row justify-content-center mt-5">
                             <span class="custom-bg-color-light px-3 custom-z-index-1">
-                                <h3 class="text-uppercase d-inline-block mb-0 custom-bg-color-primary custom-text-8 custom-text-color-light p-3 custom-rounded-1 font-weight-bolder">destaques</h3>
+                                <h3 class="text-uppercase d-inline-block mb-0 custom-bg-color-primary custom-text-8 custom-text-color-light p-3 custom-rounded-1 font-weight-bolder">lançamentos</h3>
                             </span>
                         </div>
                         <!-- Custom Title Colecao - End -->
-                        <div class="showcase-default showcase-owl">
+                        <div class="main-showcase">
                             <vtex:contentPlaceHolder id="Beach-Tennis" />
                         </div>
                     </div>
@@ -67,14 +77,14 @@
 
                 <div class="footer-newsform container">
                     <!-- Custom Title Colecao - Init -->
-                    <div class="custom-title-colecao p-relative d-flex flex-row justify-content-center mt-5">
+                    <div class="custom-title-colecao p-relative d-flex flex-row justify-content-center mt-0">
                         <span class="custom-bg-color-light px-3 custom-z-index-1">
-                            <h3 class="text-uppercase d-inline-block mb-0 custom-bg-color-primary custom-text-8 custom-text-color-light p-3 custom-rounded-1 font-weight-bolder">destaques</h3>
+                            <h3 class="text-uppercase d-inline-block mb-0 custom-bg-color-primary custom-text-8 custom-text-color-light p-3 custom-rounded-1 font-weight-bolder">newsletter</h3>
                         </span>
                     </div>
                     <!-- Custom Title Colecao - End -->
                     <div class="newsletter" id="newsletterForm">
-                        <div class="newsletter-icon">
+                        <div class="newsletter-icon d-none d-md-block">
                             <img src="/arquivos/newsletter-icon.png" />
                         </div>
                         <fieldset>
@@ -94,18 +104,12 @@
                         </fieldset>
                     </div>
                 </div>
-
-            </section><!-- #content -->
-
-            <div id="category-extra-bottom"></div>
+            </section>
 
             <!--  SubTemplate: Footer -->
             <vtex:template id="Footer" />
             <!-- /SubTemplate: Footer -->
-
-        </div><!-- .container-fluid -->
-
+        </div>
     </body>
-
     <vtex:template id="commonScripts" />
 </html>

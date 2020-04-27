@@ -3,6 +3,10 @@
 
 /* Components */
 @import './components/custom-title-colecao';
+@import './components/breadcrumbs';
+@import './components/newsletter';
+@import './components/animations';
+@import './components/hamburger';
 @import './components/minicart';
 
 /* Shared */
@@ -11,10 +15,9 @@
 
 /* Pages */
 @import './pages/home';
-@import './pages/produto';
+@import './pages/product';
 @import './pages/vitrines';
 @import './pages/departamento';
-
 
 /* Institucionals */
 @import './pages/quem-somos';
@@ -23,4 +26,8 @@
 
 body {
     overflow-x: hidden;
+}
+
+#admake-advanced-filter {
+    display: none !important;
 }

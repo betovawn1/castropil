@@ -22,8 +22,8 @@ $color-light-grey: #f7f7f7;
 .custom-bg-color-grey { background-color: $color-grey !important }
 
 /* Fonts */
-$font-primary: Verdana;
-$font-secondary: Arial;
+$font-primary: Verdana, sans-serif;
+$font-secondary: Arial, sans-serif;
 
 .custom-font-primary { font-family: $font-primary !important }
 .custom-font-secondary { font-family: $font-secondary !important }

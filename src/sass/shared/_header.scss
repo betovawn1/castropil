@@ -1,4 +1,5 @@
 header {
+    border-top: 10px solid $color-primary;
     .search {
         .busca {
             height: 49px;
@@ -14,6 +15,9 @@ header {
                 font-weight: 500;
                 font-family: initial;
                 transform: rotate(90deg) translateY(-50%);
+                @media (max-width: 575px) {
+                    display: none !important;
+                }
             }
                 
             &::before {
@@ -32,6 +36,9 @@ header {
                 background-color: $color-primary;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
+                @media (max-width: 575px) {
+                    width: 15%;
+                }
             }
 
             select {
@@ -42,13 +49,17 @@ header {
                 border-radius: 0;
                 height: 49px;
                 -webkit-appearance: none;
-                padding: 0 45px;
+                padding: 0 0 0 45px;
                 margin-left: -1px;
                 background-color: transparent;
                 outline: 0;
                 border-color: $color-medium-grey;
                 color: $color-grey;
                 font-weight: 500;
+                @media (max-width: 575px) {
+                    width: 25%;
+                    display: none !important;
+                }
             }
 
             .fulltext-search-box {
@@ -68,6 +79,9 @@ header {
                 color: $color-grey;
                 font-weight: 500;
                 padding: 0 20px;
+                @media (max-width: 575px) {
+                    width: 85%;
+                }
             }
 
             .btn-buscar {
@@ -87,6 +101,10 @@ header {
                 outline: 0;
                 font-size: 0;
                 z-index: 1;
+                @media (max-width: 575px) {
+                    width: 15%;
+                    left: 85%;
+                }
 
                 &:hover {
                     background-color: rgba(255, 255, 255, .3);
@@ -101,6 +119,57 @@ header {
 
         p {
             max-width: 170px;
+        }
+    }
+
+    #menu-mobile {
+        .recebe-menu {
+            h3 {
+                cursor: pointer;
+                position: relative;
+                &:after {
+                    content: '+';
+                    transition: .3s ease-in-out;
+                    position: absolute;
+                    font-size: 25px;
+                    bottom: -2px;
+                    right: 0;
+                }
+                &.clicked {
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                }
+                a {
+                    color: $color-dark;
+                    text-decoration: none;
+                }
+            }
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        font-size: 13px;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+        .link-login,
+        .link-orders {
+            a {
+                position: relative;
+                text-decoration: none;
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    width: 100%;
+                    background-color: #000;
+                    position: absolute;
+                    bottom: -2px
+                }
+            }
         }
     }
 }
@@ -173,30 +242,10 @@ nav {
 
     .menu-departamento {
         > div {
+            z-index: 10000;
             &:hover {
                 .dropdown {
                     display: flex !important;
-                }
-            }
-            &:nth-child(2) {
-                .dropdown {
-                    transform: translateX(-30%);
-                }
-            }
-            &:nth-child(3) {
-                .dropdown {
-                    transform: translateX(-50%);
-                }
-            }
-            &:nth-child(4) {
-                .dropdown {
-                    transform: translateX(-60%);
-                }
-            }
-            &:nth-child(5) {
-                .dropdown {
-                    left: unset !important;
-                    right: 0;
                 }
             }
         }
@@ -204,15 +253,16 @@ nav {
 
     .dropdown {
         position: absolute;
-        top: 70px;
         left: 0;
+        top: 80px;
         z-index: 1;
+        width: auto;
         background-color: $color-light;
-        min-width: 880px;
-        border-top: 10px solid $color-secondary;
         border-bottom: 10px solid $color-primary;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
         ul {
             li {
+                min-width: 450px;
                 margin-bottom: 5px;
                 span {
                     color: $color-primary;
@@ -220,6 +270,7 @@ nav {
                 }
                 a {
                     color: $color-dark;
+                    text-decoration: none;
                 }
             }
         }
