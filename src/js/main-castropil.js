@@ -12,7 +12,7 @@ document.getElementById('menu-hamburguer').addEventListener('click', function(ev
 document.getElementById('menu-mobile')
     .querySelectorAll('.recebe-menu h3')
         .forEach(function(title_mobile) {
-            title_mobile.addEventListener('click', function(ev) {
+            title_mobile.addEventListener('click', function(ev) {   
                 this.classList.toggle('clicked')
                 this.nextElementSibling.classList.toggle('d-block')
             })
@@ -99,11 +99,18 @@ function getOrder(){
         
         //valor total
         let n = totalPrice.toString()
-        console.log('Total Price ', totalPrice)
+        console.log('Total Price ', typeof n)
         if (totalPrice == 0) {
             document.querySelector('.custom-minicart-totals .total span').innerHTML = 0
         } else {
-            let price = n.replace(n.substr(n.length - 2), `,${n.substr(n.length - 2)}`)
+            // let price = n.replace(n.substr(n.length - 2), `,${n.substr(n.length - 2)}`)
+            let priceArray = n.split('')
+            priceArray[priceArray.length-2] = `,${priceArray[priceArray.length-2]}`
+            let price = ''
+            priceArray.forEach(function(num){
+                price += num
+            })
+            console.log('Price ', price)
             document.querySelector('.custom-minicart-totals .total span').innerHTML = price
         }
     })
@@ -141,14 +148,14 @@ document.querySelectorAll('.box-item .buy-button-showcase-shelf').forEach(functi
                 quantity: 1, //Standard
                 seller: 1 //Unique
             }
-
+    
             console.log([item])
         
             vtexjs.checkout.addToCart([item])
                 .done(function(orderForm){
                     console.log(orderForm)
                     getOrder()
-
+    
                     document.querySelector('.custom-col-minicart').click()
                 })
                 .catch(function() {
@@ -157,3 +164,32 @@ document.querySelectorAll('.box-item .buy-button-showcase-shelf').forEach(functi
         })
     })
 })
+
+if (document.getElementById('product-page')) {
+    let button = document.querySelector('.buy-button')
+    button.addEventListener('click', function(ev) {
+        ev.preventDefault()
+        vtexjs.checkout.getOrderForm({
+            cache: !1
+        }).done(function(a) {
+            let item = {
+                id: parseInt(button.getAttribute('href').split('sku=')[1].split('&qty=')[0]),
+                quantity: 1, //Standard
+                seller: 1 //Unique
+            }
+    
+            console.log([item])
+        
+            vtexjs.checkout.addToCart([item])
+                .done(function(orderForm){
+                    console.log(orderForm)
+                    getOrder()
+    
+                    document.querySelector('.custom-col-minicart').click()
+                })
+                .catch(function() {
+                    alert('Erro ao tentar inserir o produto no carrinho')
+                })
+        })
+    })
+}
