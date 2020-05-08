@@ -97,7 +97,7 @@ function getOrder(){
         } else {
             customMinicartBody.innerHTML = `
                 <div class="d-flex align-items-center justify-content-center w-100 h-100 px-4">
-                    <img src="./arquivos/minicart-void.jpg" class="img-fluid" />
+                    <img src="//castropil.vteximg.com.br/arquivos/minicart-void.jpg" class="img-fluid" />
                 </div>`
         }
 
