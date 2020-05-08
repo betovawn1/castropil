@@ -1,8 +1,22 @@
 document.querySelector('.custom-col-minicart').addEventListener('click', function(ev){
     document.getElementById('minicart').classList.add('d-block')
+    document.querySelector('.overlay-minicart').classList.add('minicart-is-open')
 })
 document.querySelector('#minicart .custom-minicart-footer .custom-minicart-buttons button').addEventListener('click', function(ev){
     document.getElementById('minicart').classList.remove('d-block')
+    document.querySelector('.overlay-minicart').classList.remove('minicart-is-open')
+})
+if (window.innerWidth <= 1199) {
+    document.querySelector('.minicart-icon-mobile').addEventListener('click', function(ev){
+        document.getElementById('minicart').classList.add('d-block')
+    })
+    document.querySelector('#minicart .custom-minicart-footer .custom-minicart-buttons button').addEventListener('click', function(ev){
+        document.getElementById('minicart').classList.remove('d-block')
+    })
+}
+document.querySelector('.overlay-minicart').addEventListener('click', function(ev){
+    document.getElementById('minicart').classList.remove('d-block')
+    this.classList.remove('minicart-is-open')
 })
 document.getElementById('menu-hamburguer').addEventListener('click', function(ev) {
     this.parentNode.classList.toggle('checked')
@@ -10,7 +24,7 @@ document.getElementById('menu-hamburguer').addEventListener('click', function(ev
     document.getElementsByTagName('body')[0].classList.toggle('overflow-hidden')
 })
 document.getElementById('menu-mobile')
-    .querySelectorAll('.recebe-menu h3')
+    .querySelectorAll('.menu-list-mobile h3')
         .forEach(function(title_mobile) {
             title_mobile.addEventListener('click', function(ev) {   
                 this.classList.toggle('clicked')
@@ -37,13 +51,13 @@ function getOrder(){
     }).done(function(data){
         console.log('getOrder data => ', data)
         let customMinicartBody = document.querySelector('.custom-minicart-body')
-        let totalPrice = 0
+        let totalPrice = new Object()
         if (data.items.length > 0) {
             document.querySelector('.badge').innerHTML = data.items.length
             let items, item, price = ''
             let counter = 0
             customMinicartBody.innerHTML = ''
-            data.items.forEach(function(el){
+            data.items.forEach(function(el, id){
                 console.log('el ', el)
                 let n = el.price.toString()
                 console.log('n ', typeof n)
@@ -73,7 +87,10 @@ function getOrder(){
                 customMinicartBody.innerHTML += item  
                 item = ''
                     
-                totalPrice = totalPrice + parseInt(el.price)
+                totalPrice[id] = {
+                    price: parseInt(el.price),
+                    qtd: el.quantity
+                }
                     
                 ++ counter
             })        
@@ -110,20 +127,24 @@ function getOrder(){
         })
         
         //valor total
-        let n = totalPrice.toString()
-        console.log('Total Price ', typeof n)
         if (totalPrice == 0) {
             document.querySelector('.custom-minicart-totals .total span').innerHTML = 0
         } else {
-            // let price = n.replace(n.substr(n.length - 2), `,${n.substr(n.length - 2)}`)
-            let priceArray = n.split('')
-            priceArray[priceArray.length-2] = `,${priceArray[priceArray.length-2]}`
-            let price = ''
-            priceArray.forEach(function(num){
-                price += num
+            let price = new Array()
+            for (let [key, value] of Object.entries(totalPrice)) {
+                price.push(value.price * value.qtd)
+            }
+            let amount = 0
+            price.forEach(function(priceSum) {
+                amount += priceSum
             })
-            console.log('Price ', price)
-            document.querySelector('.custom-minicart-totals .total span').innerHTML = price
+            let finalPrice = amount.toString().split('')
+            finalPrice[finalPrice.length-2] = `,${finalPrice[finalPrice.length-2]}`
+            let finalfinalPrice = ''
+            finalPrice.forEach(function(priceBuild) {
+                finalfinalPrice += priceBuild
+            })
+            document.querySelector('.custom-minicart-totals .total span').innerHTML = finalfinalPrice
         }
     })
 }

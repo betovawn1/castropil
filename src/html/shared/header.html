@@ -10,7 +10,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="recebe-menu">
+                    <div class="menu-list-mobile">
                         <div class="p-relative h-100">
                             <h3 class="mb-0 ml-0 h-100">
                                 <a class="custom-font-primary font-weight-bolder custom-text-5" href="#">Embalagens e Descartaveis</a>
@@ -309,7 +309,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-2">
+                <div class="col-12 col-lg-2 pr-lg-0">
                     <div class="hamburguer-menu d-block d-lg-none">
                         <input id="menu-hamburguer" type="checkbox" />
     
@@ -322,8 +322,11 @@
                     <a href="/" title="STORE" class="d-flex align-items-center justify-content-center justify-content-lg-start link-logo mb-4 mb-lg-0">
                         <img src="/arquivos/logo.png" alt="Logo" />
                     </a>
+                    <div class="minicart-icon-mobile custom-bg-color-primary d-flex d-lg-none align-items-center justify-content-center">
+                        <img src="/arquivos/minicart.png" class="img-fluid" alt="Minicart" />
+                    </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <div class="sing-in col-xs-12 col-sm-12 col-md-12 col-lg-12 d-none d-lg-block">
                         <div class="btn-group d-flex align-items-center justify-content-start" role="group">
                             <img src="/arquivos/login.png" width="23" height="23" />
@@ -339,18 +342,30 @@
                         <vtex.cmc:fullTextSearchBox />
                     </div>
                 </div>
-
-                <div class="col-lg-4 d-flex flex-column justify-content-end">
-                    <div class="custom-row-header-socials"></div>
-                    <div class="custom-row-contact d-none d-lg-block">
-                        <div class="w-100 h-100 pl-3 d-flex align-items-center">
+                <div class="col-lg-3 flex-column d-none d-lg-flex">
+                    <div class="custom-row-header-socials">
+                        <ul class="list-unstyled d-flex align-items-center justify-content-end">
+                            <li class="mr-1">
+                                <a href="#">
+                                    <img src="/arquivos/icon_insta.png" alt="" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="/arquivos/icon_face.png" alt="" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="custom-row-contact">
+                        <div class="w-100 h-100 pl-3 d-flex align-items-center justify-content-end">
                             <img src="/arquivos/contact.png" width="51" height="51" />
-                            <div class="ml-2">
+                            <div class="ml-2 custom-font-primary">
                                 <div class="text-center mb-1">
                                     <span class="text-capitalize custom-text-color-dark font-weight-bolder custom-text-5">televendas: </span>
                                     <span class="custom-text-color-primary custom-text-5">(11) <strong>2088-4000</strong></span>
                                 </div>
-                                <p class="m-0 custom-text-2 custom-text-color-grey text-center mx-auto">
+                                <p class="m-0 custom-text-color-grey text-center mx-auto">
                                     Segunda a Sexta 07h30 às 17h00
                                     ou <strong>solicite um representante</strong>
                                 </p>
@@ -367,7 +382,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 custom-col-menu custom-bg-color-secondary d-flex">
-                <div class="menu-departamento d-flex align-items-center justify-content-center">
+                <div class="menu-departamento d-flex align-items-center justify-content-center overflow-visible">
                     <div class="p-relative h-100">
                         <h3 class="d-flex justify-content-center align-items-center mb-0 ml-0 h-100">
                             <img class="mr-2" src="/arquivos/embalagens.png" width="25" height="33" alt="Embalagens e Descartaveis" />
@@ -749,9 +764,7 @@
         <img src="./arquivos/cart.png" width="63" height="60" class="mr-2" />
         <h4 class="text-uppercase custom-text-10 custom-text-color-secondary m-0 font-weight-bolder">carrinho de compras</h4>
     </div>
-    <div class="custom-minicart-body">
-        
-    </div>
+    <div class="custom-minicart-body"></div>
     <div class="custom-minicart-footer">
         <div class="custom-minicart-totals d-flex align-items-center justify-content-between p-3">
             <span>Total da Compra:</span>
@@ -763,3 +776,5 @@
         </div>
     </div>
 </div>
+
+<div class="overlay-minicart"></div>

@@ -21,6 +21,9 @@
       }
     }
   }
+  .buy-button-showcase-shelf {
+    font-size: 15px;
+  }
 }
 
 .prateleira{
@@ -62,7 +65,7 @@
     span.best-price {
       display: block;
       color: #0a80c5;
-      font-size: 23px;
+      font-size: 25px;
       font-weight: 700;
       &:before {
         content: "Por apenas:";

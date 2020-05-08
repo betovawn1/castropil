@@ -4,8 +4,11 @@
     top: 0;
     right: 0;
     width: 465px;
-    z-index: 2;
+    z-index: 10001;
     box-shadow: 0 0 30px rgba(4, 2, 4, 0.25);
+    @media (max-width: 1199px) {
+        width: 100%;
+    }
 }
 
 #minicart .custom-minicart-header {

@@ -2,8 +2,8 @@
     cursor: pointer;
     background: #fff;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     position: absolute;
     left: 0;
     top: 0;
@@ -63,13 +63,15 @@ input:checked ~ label .hamburguer:after {
 .hamburguer-menu {
     position: absolute;
     top: 0;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
+    z-index: 1;
     &.checked {
         right: 0;
         .menu {
             left: unset;
-            right: 15px;
+            right: 14px;
+            top: -1px;
         }
     }
     input {

@@ -10,9 +10,6 @@
 #end
 
     <a class="product-image" title="$escapedName" href="$uri">
-        <span class="product-seal">
-            <img src="./arquivos/seal.png" alt="Selo Castropil" />
-        </span>
         $product.GetImageTag(2)
     </a>
     
@@ -28,11 +25,11 @@
                     <span class="old-price">
                         $product.ListPrice
                     </span>
-                    <span class="best-price">
+                    <span class="best-price font-weight-bold custom-font-primary">
                         $product.BestPrice
                     </span>
                 #else
-                    <span class="best-price">
+                    <span class="best-price font-weight-bold custom-font-primary">
                         $product.BestPrice
                     </span>                    
                 #end
@@ -43,7 +40,7 @@
                 #end
             </a>
         </span>
-        <button class="btn buy-button-showcase-shelf animated-button-swipe-right">
+        <button class="btn buy-button-showcase-shelf animated-button-swipe-right font-weight-bold custom-font-primary text-uppercase">
             <span>Adicionar ao carrinho</span>
         </button>
     #else
