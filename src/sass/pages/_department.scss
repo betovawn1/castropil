@@ -103,26 +103,33 @@
                         h5 {
                             position: relative;
                             cursor: pointer;
-                            &:after {
-                                content: '';
-                                background-image: url('//castropil.myvtex.com//arquivos/arrow.png');
-                                background-repeat: no-repeat;
-                                background-size: contain;
-                                display: block;
-                                height: 10px;
-                                width: 11px;
-
-                                position: absolute;
-                                top: 50%;
-                                right: 0;
-
-                                transition: .3s linear .1s;
-                                transform: translateY(-50%);
+                            &.haveChildrens {
+                                &:after {
+                                    content: '';
+                                    background-image: url('//castropil.myvtex.com//arquivos/arrow.png');
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    display: block;
+                                    height: 10px;
+                                    width: 11px;
+    
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+    
+                                    transition: .3s linear .1s;
+                                    transform: translateY(-50%);
+                                }
                             }
                             &.rotate {
                                 &:after {
                                     transform: translateY(-50%) rotate(-180deg);
                                 }
+                            }
+                            a {
+                                width: 90%;
+                                display: block;
+                                word-wrap: break-word;
                             }
                         }
                     }

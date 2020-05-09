@@ -229,4 +229,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
             })
         })
     }
+
+    let $menuDepartamento = document.querySelector('.sidebar #departament-navegador .navigation .menu-departamento')
+    if ($menuDepartamento) {
+        $menuDepartamento.querySelectorAll('h4').forEach(function(h4) {
+            if (h4.nextElementSibling.nodeName == 'UL') {
+                h4.classList.add('haveChildrens')
+            }
+        })
+        $menuDepartamento.querySelectorAll('h5').forEach(function(h5) {
+            if (h5.nextElementSibling.nodeName == 'UL') {
+                h5.classList.add('haveChildrens')
+            }
+        })
+    }
 })
