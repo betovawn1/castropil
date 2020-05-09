@@ -13,6 +13,7 @@
         justify-content: space-between;
         flex-flow: row;
         p {
+            font-size: 13px;
             font-weight: bold;
             @media (max-width: 575px) {
                 text-align: center;
