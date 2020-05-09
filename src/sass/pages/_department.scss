@@ -237,7 +237,7 @@
             margin-bottom: 20px !important;
             h2 {
                 background-color: $color-light;
-                transform: translateX(-50%);
+                transform: translate(-50%,-50%);
                 text-transform: uppercase;
                 color: $color-dark;
                 position: absolute;
@@ -247,11 +247,12 @@
                 padding: 0 20px;
                 z-index: 1;
                 left: 50%;
+                top: 50%;
             }
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 0;
-            height: 20px;
+            height: 60px;
             border: 0;
             &:after {
                 content: '';

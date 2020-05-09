@@ -147,6 +147,7 @@ header {
     #menu-mobile {
         .menu-list-mobile {
             h3 {
+                padding: 5px 0;
                 cursor: pointer;
                 position: relative;
                 &:after {
@@ -163,15 +164,23 @@ header {
                     }
                 }
                 a {
-                    color: $color-dark;
                     text-decoration: none;
+                    color: $color-dark;
+                    display: block;
+                    width: 90%;
                 }
             }
             ul {
+                margin-top: 10px;
+                margin-left: 10px;
+                margin-bottom: 10px;
                 li {
                     margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                     a {
-                        font-size: 13px;
+                        font-size: 12px;
                         line-height: 1;
                     }
                 }
@@ -284,13 +293,14 @@ nav {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
         ul {
             li {
-                min-width: 450px;
+                min-width: 410px;
                 margin-bottom: 5px;
                 span {
                     color: $color-primary;
                     margin-right: 5px;
                 }
                 a {
+                    font-size: 13px;
                     color: $color-dark;
                     text-decoration: none;
                 }
