@@ -173,6 +173,17 @@ header {
     }
 
     #menu-mobile {
+        position: fixed;
+        width: 75%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #fff;
+        height: 100%;
+        padding: 10px 20px;
+        z-index: 9999999;
+        box-shadow: 0 0 5px #ddd;
+        overflow: auto;
         .menu-list-mobile {
             h3 {
                 padding: 5px 0;
@@ -227,6 +238,29 @@ header {
                     background-color: #000;
                     position: absolute;
                     bottom: -2px
+                }
+            }
+        }
+        .welcome-signed-mobile {
+            display: none;
+        }
+        &.logged {
+            .menu-mobile-account {
+                ul {
+                    display: none;
+                }
+                .welcome-signed-mobile {
+                    display: block;
+                    padding: 20px 0;
+                    .welcome-name {
+                        margin-left: 4px;
+                        color: $color-dark;
+                        text-decoration: underline;
+                    }
+                    .welcome-logout {
+                        text-transform: lowercase;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
