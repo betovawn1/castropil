@@ -5,9 +5,8 @@
                 <div id="menu-mobile" class="d-none">
                     <div class="menu-mobile-account">
                         <ul>
-                            <vtex.cmc:accountUserProfile />
-                            <!-- <li class="link-login mt-0"><a href="/account" title="Fazer Login">Entrar</a></li>
-                            <li class="link-orders mt-0"><a href="/account/orders" title="Meus Pedidos">Meus Pedidos</a></li> -->
+                            <li class="link-login mt-0"><a href="/account" title="Fazer Login">Entrar</a></li>
+                            <li class="link-orders mt-0"><a href="/account/orders" title="Meus Pedidos">Meus Pedidos</a></li>
                         </ul>
                     </div>
                     <div class="menu-list-mobile">
@@ -22,7 +21,7 @@
                             <div class="menu">
                                 <span class="hamburguer"></span>
                             </div>
-                        </label>
+                        </label>Olá, <span class="welcome-name"></span>
                     </div>
                     <a href="/" title="STORE" class="d-flex align-items-center justify-content-center justify-content-lg-start link-logo mb-4 mb-lg-0">
                         <img src="/arquivos/logo.png" alt="Logo" />
@@ -33,14 +32,19 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="sing-in col-xs-12 col-sm-12 col-md-12 col-lg-12 d-none d-lg-block">
-                        <div class="btn-group d-flex align-items-center justify-content-start" role="group">
+                        <div class="btn-group d-flex align-items-center justify-content-start welcome-sign" role="group">
                             <img src="/arquivos/login.png" width="23" height="23" />
-                            <a href="/account" title="Fazer Login" class="btn-default btn-login pr-1 custom-text-color-dark">
+                            <a href="/account" title="Fazer Login" class="btn-default welcome-sign-in btn-login pr-1 custom-text-color-dark">
                                 <span class="custom-text-3">Faça seu <span class="custom-text-color-primary">Login</span></span>
                             </a>
-                            <a href="/account/orders" title="Meus Pedidos" class="btn-default btn-orders pl-0 custom-text-color-dark">
+                            <a href="/account" title="Meus Pedidos" class="btn-default welcome-sign-up btn-orders pl-0 custom-text-color-dark">
                                 <span class="custom-text-3">ou <strong>Cadastre-se</strong></span>
                             </a>
+                        </div>
+                        <div class="welcome-signed custom-text-color-dark">
+                            <img src="/arquivos/login.png" width="23" height="23" class="mr-1" />
+                            Bem vindo<a href="/account" class="welcome-name"></a>!
+                            <a href="/no-cache/user/logout" class="welcome-logout">Sair</a>
                         </div>
                     </div>
                     <div class="search col-xs-12 col-sm-12 col-md-12 col-lg-12 px-0 mx-0 mx-lg-3">

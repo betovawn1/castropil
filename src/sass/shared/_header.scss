@@ -144,6 +144,34 @@ header {
         }
     }
 
+    .sing-in {
+        .welcome-signed {
+            display: none;
+            font-size: 12px;
+            font-weight: 600;
+            .welcome-name {
+                padding: 0;
+                font-weight: 400;
+                margin-left: 3px;
+                color: $color-dark;
+                text-decoration: underline;
+            }
+            .welcome-logout {
+                padding: 0;
+                text-transform: lowercase;
+                text-decoration: underline;
+            }
+        }
+        &.logged {
+            .welcome-sign {
+                display: none !important;
+            }
+            .welcome-signed {
+                display: block;
+            }
+        }
+    }
+
     #menu-mobile {
         .menu-list-mobile {
             h3 {
