@@ -10,18 +10,37 @@
                     .menu-departamento {
                         display: block !important;
                         h3 {
-                            display: none;
-                        }
-                        h4 {
-                            line-height: .8;
+                            display: block !important;
                             a {
                                 font-size: 14px;
                                 font-weight: 700;
                                 text-transform: uppercase;
                                 color: $color-dark !important;
                             }
-                            + ul {
+                            ~ h4 {
                                 display: none;
+                            }
+                            &.clicked {
+                                ~ h4 {
+                                    display: block;
+                                }
+                            }
+                        }
+                        h4 {
+                            margin-bottom: 10px;
+                            line-height: 1;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            a {
+                                width: 100%;
+                                display: block;
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: $color-dark !important;
+                            }
+                            + ul {
+                                display: none !important;
                                 margin-bottom: 3px;
                                 &.clicked {
                                     display: block;
@@ -38,6 +57,7 @@
                         h5 {
                             font-size: 14px;
                             font-weight: 700;
+                            margin-top: 15px;
                             text-transform: uppercase;
                             color: $color-dark !important;
                             + ul {
@@ -99,27 +119,25 @@
                                 }
                             }
                         }
-                        h4,
+                        h3,
                         h5 {
                             position: relative;
                             cursor: pointer;
-                            &.haveChildrens {
-                                &:after {
-                                    content: '';
-                                    background-image: url('//castropil.myvtex.com//arquivos/arrow.png');
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
-                                    display: block;
-                                    height: 10px;
-                                    width: 11px;
-    
-                                    position: absolute;
-                                    top: 50%;
-                                    right: 0;
-    
-                                    transition: .3s linear .1s;
-                                    transform: translateY(-50%);
-                                }
+                            &:after {
+                                content: '';
+                                background-image: url('//castropil.myvtex.com//arquivos/arrow.png');
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                display: block;
+                                height: 10px;
+                                width: 11px;
+
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+
+                                transition: .3s linear .1s;
+                                transform: translateY(-50%);
                             }
                             &.rotate {
                                 &:after {

@@ -56,18 +56,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     this.nextElementSibling.classList.toggle('d-block')
                 })
             })
-    document.querySelectorAll('#departament-navegador .navigation h4').forEach(function(h4) {
-        h4.addEventListener('click', function(ev) {
-            this.classList.toggle('rotate')
-            this.nextElementSibling.classList.toggle('clicked')
+    const $departmentNavigator = document.querySelector('#departament-navegador')
+    if (document.querySelector('#departament-navegador')) {
+        console.log('Estou na Página de Departamento')
+        $departmentNavigator.querySelectorAll('.navigation h3').forEach(function(h3) {
+            h3.addEventListener('click', function(ev) {
+                this.classList.toggle('rotate')
+                this.classList.toggle('clicked')
+            })
         })
-    })
-    document.querySelectorAll('#departament-navegador .navigation h5').forEach(function(h5) {
-        h5.addEventListener('click', function(ev) {
-            this.classList.toggle('rotate')
-            this.nextElementSibling.classList.toggle('clicked')
+        $departmentNavigator.querySelectorAll('.navigation h5').forEach(function(h5) {
+            h5.addEventListener('click', function(ev) {
+                this.classList.toggle('rotate')
+                this.nextElementSibling.classList.toggle('clicked')
+            })
         })
-    })
+        $departmentNavigator.querySelector('.navigation h3 a').innerText = 'FILTROS'
+    }
     // init
     function getOrder(){
         console.log('getOrder')
