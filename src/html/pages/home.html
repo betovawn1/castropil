@@ -17,25 +17,13 @@
             <section id="home-content" class="container-fluid">
                 <div class="row">
                     <div class="fullbanner">
-                        <picture>
-                            <source media="(min-width: 575px)" srcset="./arquivos/banner_top_desktop.jpg" />
-                            <source media="(min-width: 0px)" srcset="./arquivos/banner_top_mobile.jpg" />
-                            <img src="./arquivos/banner_top_desktop.jpg" alt="Castropil" />
-                        </picture>
+                        <vtex:contentPlaceHolder id="bannersegmentado" />
                     </div><!-- .fullbanner -->
                 </div>
 
                 <div class="container">
                     <div class="ruler row flex-wrap align-items-center justify-content-center justify-content-lg-between mt-3 mx-auto">
-                        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center justify-content-center">
-                            <img src="./arquivos/ruler-1.png" />
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex align-items-center justify-content-center mt-3 mt-sm-0">
-                            <img src="./arquivos/ruler-2.png" />
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex align-items-center justify-content-center mt-3 m-lg-0">
-                            <img src="./arquivos/ruler-3.png" />
-                        </div>
+                        <vtex:contentPlaceHolder id="bannertarja" />
                     </div>
 
                     <div id="Colecao1">
@@ -53,11 +41,7 @@
 
                     <div class="container bottombanner-container">
                         <div class="bottombanner">
-                            <picture>
-                                <source media="(min-width: 575px)" srcset="./arquivos/banner_vitrine_desktop.jpg" />
-                                <source media="(min-width: 0px)" srcset="./arquivos/banner_vitrine_mobile.jpg" />
-                                <img src="./arquivos/banner_vitrine_desktop.jpg" alt="Oferta" />
-                            </picture>
+                            <vtex:contentPlaceHolder id="bottombanner" />
                         </div>
                     </div>
 

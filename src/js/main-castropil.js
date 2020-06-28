@@ -272,4 +272,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
         })
     }
+
+    document.getElementById("openFilters").addEventListener("click", function(e) {
+        document.querySelector("aside").classList.add("d-block")
+        document.querySelector(".overlay-menu-filters").classList.add("d-block")
+    })
+    document.querySelector('.overlay-menu-filters').addEventListener('click', function() {
+        document.querySelector('aside').classList.remove('d-block')
+        document.querySelector('.overlay-menu-filters').classList.remove('d-block')
+    })
 })
