@@ -174,6 +174,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     flex-flow: row; }
+    @media (max-width: 575px) {
+      #newsletterForm fieldset {
+        flex-flow: column; } }
     #newsletterForm fieldset p {
       font-size: 13px;
       font-weight: bold; }
@@ -771,6 +774,9 @@ nav .dropdown {
         padding-top: 20px;
         font-size: 24px;
         margin-bottom: 15px; }
+        @media (max-width: 400px) {
+          .footer .col-televendas .televendas h3 {
+            font-size: 22px; } }
       .footer .col-televendas .televendas .televendas-inside {
         contain: content; }
         .footer .col-televendas .televendas .televendas-inside span {
@@ -832,12 +838,16 @@ nav .dropdown {
 /* Pages */
 .ruler {
   height: auto; }
-  @media (max-width: 575px) {
-    .ruler {
-      max-width: 300px; } }
+  .ruler img {
+    max-width: 100%;
+    height: auto; }
 
 .main-showcase {
   margin: 30px 0; }
+
+.bottombanner img {
+  max-width: 100%;
+  height: auto; }
 
 #product-page #product-content .product-image .apresentacao #show .thumbs li a {
   padding: 5px;
@@ -1403,9 +1413,3 @@ nav .dropdown {
   #institucional footer {
     margin-top: none !important; }
 
-body {
-  overflow-x: hidden;
-  font-family: Verdana, sans-serif; }
-
-#admake-advanced-filter {
-  display: none !important; }

@@ -12,6 +12,9 @@
         flex-wrap: wrap;
         justify-content: space-between;
         flex-flow: row;
+        @media (max-width: 575px) {
+            flex-flow: column;
+        }
         p {
             font-size: 13px;
             font-weight: bold;
